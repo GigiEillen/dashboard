@@ -1,0 +1,71 @@
+.widgets-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .widget {
+    flex-basis: 25%;
+    padding-top: 25px;
+
+    .widget-card {
+      margin: 0 10px;
+      height: 100%;
+
+      .title {
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
+
+        p {
+          padding-left: 10px;
+        }
+      }
+
+      .ant-card-body {
+        padding: 20px 24px 20px 24px;
+      }
+
+      .measures {
+        padding-top: 16px;
+        display: flex;
+
+        > * {
+          flex-basis: 33%;
+        }
+
+        .rate-value {
+          display: flex;
+          border-radius: 50px;
+          padding: 5px 10px;
+          justify-content: space-between;
+          align-items: center;
+
+          &.active {
+            background: #ecfdf3;
+          }
+
+          &.expired {
+            background: #fef3f2;
+          }
+
+          .anticon {
+            padding-right: 5px;
+          }
+        }
+
+        .line-border {
+          color: #d0d5dd;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+
+  .active {
+    color: #12b76a;
+  }
+
+  .expired {
+    color: #f04438;
+  }
+}

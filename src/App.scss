@@ -28,15 +28,40 @@ body {
   font-weight: 500;
 }
 
+.secondary {
+  color: #667085;
+}
+
 h4 {
   font-size: 24px;
   line-height: 1.2;
   margin: 0;
 }
 
+h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'Inter';
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'Inter';
+}
+
 p {
+  font-family: 'Inter';
+  margin: 0;
+
   &.sm {
     font-size: 12px;
+    line-height: 1.5;
+  }
+  &.large {
+    font-size: 16px;
     line-height: 1.5;
   }
 }

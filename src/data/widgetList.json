@@ -1,0 +1,128 @@
+[
+  {
+    "id": "aceOpportunities",
+    "label": "ACE Opportunities",
+    "measures": [
+      {
+        "status": "default",
+        "type": "info",
+        "label": "Total",
+        "value": "1,234"
+      },
+      {
+        "status": "default",
+        "type": "info",
+        "label": "AWS",
+        "value": "1,000"
+      },
+      {
+        "status": "default",
+        "type": "info",
+        "label": "Partners",
+        "value": "234"
+      }
+    ]
+  },
+  {
+    "id": "grossSoftwareSales",
+    "label": "Gross software sales",
+    "value": 100,
+    "measures": [
+      {
+        "status": "active",
+        "type": "rate",
+        "value": ["5.2k", "53%"]
+      }
+    ]
+  },
+  {
+    "id": "privateOffers",
+    "label": "Private Offers",
+    "value": 100,
+    "measures": [
+      {
+        "status": "expired",
+        "type": "rate",
+        "value": ["5.2k", "53%"]
+      }
+    ]
+  },
+  {
+    "id": "activeSubscriptions",
+    "label": "Active subscriptions",
+    "value": 100,
+    "measures": [
+      {
+        "status": "active",
+        "type": "rate",
+        "value": ["5.2k", "53%"]
+      }
+    ]
+  },
+  {
+    "id": "resellerAuth",
+    "label": "Reseller authorizations",
+    "measures": [
+      {
+        "status": "active",
+        "type": "info",
+        "label": "Active",
+        "value": "100"
+      },
+      {
+        "status": "expired",
+        "type": "info",
+        "label": "Expired",
+        "value": "254"
+      }
+    ]
+  },
+  {
+    "id": "listing",
+    "label": "Listings",
+    "measures": [
+      {
+        "status": "active",
+        "type": "info",
+        "label": "Active",
+        "value": "100"
+      },
+      {
+        "status": "expired",
+        "type": "info",
+        "label": "Expired",
+        "value": "254"
+      }
+    ]
+  },
+  {
+    "id": "freeTrials",
+    "label": "Free trials",
+    "measures": [
+      {
+        "status": "active",
+        "type": "info",
+        "label": "Active",
+        "value": "100"
+      },
+      {
+        "status": "expired",
+        "type": "info",
+        "label": "Expired",
+        "value": "254"
+      }
+    ]
+  },
+  {
+    "id": "daysSalesOut",
+    "label": "Days sales outstanding (DSO)",
+    "value": 100,
+    "measures": [
+      {
+        "status": "active",
+        "type": "rate",
+        "value": ["5.2k", "53%"]
+      }
+    ]
+  }
+]
