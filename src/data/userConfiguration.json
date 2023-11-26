@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "value": "0",
+      "label": "Org1"
+    },
+    {
+      "value": "1",
+      "label": "Org2"
+    }
+  ]
+}

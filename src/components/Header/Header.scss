@@ -1,0 +1,20 @@
+.header-content {
+  height: 39px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e7ec;
+
+  .user-section {
+    display: flex;
+
+    > * {
+      padding-left: 20px;
+    }
+
+    .group-dropdown {
+      width: 71px;
+    }
+  }
+}

@@ -80,3 +80,10 @@ interface Widget {
 }
 
 export type WidgetList = Array<Widget>;
+
+/**
+ * USer configuration and information response format
+ */
+export interface UserConfig {
+  groups: Array<{ value: string; label: string }>;
+}

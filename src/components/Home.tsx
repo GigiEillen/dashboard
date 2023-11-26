@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Spin } from 'antd';
 
+import Header from './Header';
 import WidgetHeader from './WidgetHeader';
 import Widgets from './Widgets';
-import type { OnPeriodFilterChange, PeriodFilter, WidgetList } from './types';
+import type {
+  OnPeriodFilterChange,
+  PeriodFilter,
+  UserConfig,
+  WidgetList,
+} from './types';
 
 import widgetListResponse from '../data/widgetList.json';
+import userConfiguration from '../data/userConfiguration.json';
 
 const Home = () => {
   const [periodFilter, setPeriodFilter] = useState<PeriodFilter>({
@@ -15,22 +22,44 @@ const Home = () => {
   });
 
   const [widgets, setWidgets] = useState<WidgetList>();
+  const [userConfig, setUserConfig] = useState<UserConfig>();
+  const [selectedGroup, setSelectedGroup] = useState('');
 
-  const onPeriodFilterChange: OnPeriodFilterChange = (key) => (newValue) => {
-    setPeriodFilter((prevState) => ({ ...prevState, [key]: newValue }));
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setUserConfig(userConfiguration);
+      setSelectedGroup(userConfiguration.groups[0]?.value);
+    }, 300);
+  }, []);
 
   useEffect(() => {
     setWidgets(undefined);
 
-    // Simulating call based on filters
+    // Simulating calls based on filters
     setTimeout(() => {
       setWidgets(widgetListResponse as WidgetList);
     }, 500);
   }, [periodFilter]);
 
+  const onPeriodFilterChange: OnPeriodFilterChange = (key) => (newValue) => {
+    setPeriodFilter((prevState) => ({ ...prevState, [key]: newValue }));
+  };
+
+  const onGroupChange = (newValue: string) => {
+    setSelectedGroup(newValue);
+  };
+
   return (
     <div className="home-container">
+      {userConfig ? (
+        <Header
+          groupList={userConfig.groups}
+          group={selectedGroup}
+          onGroupChange={onGroupChange}
+        />
+      ) : (
+        <Spin />
+      )}
       <WidgetHeader
         periodFilter={periodFilter}
         onPeriodFilterChange={onPeriodFilterChange}
