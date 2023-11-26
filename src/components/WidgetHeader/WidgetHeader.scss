@@ -1,0 +1,32 @@
+.widget-header-content {
+  padding: 0 20px;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+    justify-content: space-between;
+  }
+
+  .filter {
+    display: flex;
+    align-items: center;
+
+    .period-unit {
+      width: 120px;
+    }
+
+    .period {
+      width: 134px;
+    }
+
+    .period-by {
+      width: 73px;
+      margin: 0 10px;
+    }
+
+    p {
+      padding: 0 15px;
+    }
+  }
+}

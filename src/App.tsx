@@ -1,10 +1,12 @@
-import './App.css';
+import Home from './components/Home';
+
+import './App.scss';
 
 function App() {
   return (
-    <>
-      <div>Default Screen</div>
-    </>
+    <div className="app-container">
+      <Home />
+    </div>
   );
 }
 

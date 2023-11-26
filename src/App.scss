@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Inter';
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.home-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  &.sm {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+.ant-select {
+  font-family: 'Inter';
+}
+
+:where(.css-dev-only-do-not-override-zcfrx9).ant-select-single
+  .ant-select-selector {
+  font-size: 12px;
+}
