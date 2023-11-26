@@ -87,3 +87,39 @@ export type WidgetList = Array<Widget>;
 export interface UserConfig {
   groups: Array<{ value: string; label: string }>;
 }
+
+interface Dataset {
+  /**
+   * Chart group type (E.g. "line", "bar", etc.)
+   */
+  type: string;
+
+  /**
+   * Legend label
+   */
+  label: string;
+
+  /**
+   * Data to be displayed order by unit
+   */
+  data: number[];
+}
+
+interface OverviewChart {
+  /**
+   * Dataset list
+   */
+  datasets: Dataset[];
+
+  /**
+   * x Axis labels (unit)
+   */
+  labels: string[];
+
+  /**
+   * Additional stats
+   */
+  stats: { label: string; value: string | number }[];
+}
+
+export type BusinessOverviewData = Record<string, OverviewChart>;

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Spin } from 'antd';
 
+import BusinessOverview from './BusinessOverview';
 import Header from './Header';
 import WidgetHeader from './WidgetHeader';
 import Widgets from './Widgets';
@@ -65,6 +66,7 @@ const Home = () => {
         onPeriodFilterChange={onPeriodFilterChange}
       />
       {widgets ? <Widgets widgets={widgets} /> : <Spin />}
+      <BusinessOverview />
     </div>
   );
 };

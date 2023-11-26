@@ -1,0 +1,146 @@
+{
+  "opportunities": {
+    "datasets": [
+      {
+        "type": "line",
+        "label": "AWS Originated Opportunities Tab",
+        "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+      },
+      {
+        "type": "bar",
+        "label": "Total count (AO+PO)",
+        "data": [90, 60, 40, 70, 39, 90, 70, 40, 110, 70, 25, 78]
+      }
+    ],
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "stats": [
+      { "label": "All Opportunities", "value": 1000 },
+      { "label": "AWS Originated", "value": 400 },
+      { "label": "Partner Originated", "value": 600 },
+      { "label": "Launched", "value": 100 },
+      { "label": "Win Rate", "value": "100%" },
+      { "label": "Validation Rate", "value": "100%" }
+    ]
+  },
+  "gss": {
+    "datasets": [
+      {
+        "type": "line",
+        "label": "AWS Originated Opportunities Tab",
+        "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+      },
+      {
+        "type": "bar",
+        "label": "Total count (AO+PO)",
+        "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+      }
+    ],
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "stats": [
+      { "label": "Total GSS", "value": "$1.2M" },
+      { "label": "Self-Serve", "value": "$200k" },
+      { "label": "Private Offers", "value": "$1M" },
+      { "label": "Channel", "value": "$500k" },
+      { "label": "US", "value": "$200k" },
+      { "label": "International", "value": "$750" }
+    ]
+  },
+  "privateOffers": {
+    "datasets": [
+      {
+        "type": "line",
+        "label": "AWS Originated Opportunities Tab",
+        "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+      },
+      {
+        "type": "bar",
+        "label": "Total count (AO+PO)",
+        "data": [90, 60, 40, 70, 39, 90, 70, 40, 110, 70, 25, 78]
+      }
+    ],
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "stats": [
+      { "label": "Total Private Offers", "value": 1000 },
+      { "label": "MPPO", "value": 400 },
+      { "label": "CPPO", "value": 600 },
+      { "label": "Renewals", "value": 100 },
+      { "label": "TCV", "value": "$3M" },
+      { "label": "Average Listing Fee", "value": "4%" }
+    ]
+  },
+  "activeSubs": {
+    "datasets": [
+      {
+        "type": "line",
+        "label": "AWS Originated Opportunities Tab",
+        "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+      },
+      {
+        "type": "bar",
+        "label": "Total count (AO+PO)",
+        "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+      }
+    ],
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "stats": [
+      { "label": "Active Subscribers", "value": "1000" },
+      { "label": "Self-Serve", "value": "400" },
+      { "label": "Private Offers", "value": "600" },
+      { "label": "CPPO", "value": "200" },
+      { "label": "SaaS", "value": "100" },
+      { "label": "AMI", "value": "-" }
+    ]
+  }
+}
