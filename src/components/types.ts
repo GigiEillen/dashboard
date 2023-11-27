@@ -208,3 +208,32 @@ type CardInfoData = BaseCardInfo &
   (ProgressInfo | ListInfo | ChartInfo | ActivityInfo);
 
 export type CardsInfoData = Record<string, CardInfoData>;
+
+interface Message {
+  /**
+   * User Id
+   */
+  id: string;
+
+  /**
+   * User name
+   */
+  name: string;
+
+  /**
+   * Last message date.
+   */
+  date: string;
+
+  /**
+   * Message
+   */
+  message: string;
+
+  /**
+   * Avatar path or user name initials
+   */
+  avatar: string;
+}
+
+export type MessagesResponse = Message[];

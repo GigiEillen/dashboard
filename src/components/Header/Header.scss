@@ -17,3 +17,24 @@
     }
   }
 }
+
+.message-container {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  column-gap: 10px;
+
+  .message {
+    display: block;
+    width: 90%;
+
+    .message-title {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .ant-typography {
+      margin-bottom: 0;
+    }
+  }
+}
