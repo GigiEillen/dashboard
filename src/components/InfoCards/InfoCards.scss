@@ -2,7 +2,8 @@
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 2%;
+  column-gap: 2%;
+  row-gap: 20px;
 
   > * {
     flex-basis: 49%;

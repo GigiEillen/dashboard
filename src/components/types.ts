@@ -105,24 +105,41 @@ interface Dataset {
   data: number[];
 }
 
-interface OverviewChart {
+interface OverviewContent {
   /**
-   * Dataset list
+   * Section label. This should be used for Menu items.
    */
-  datasets: Dataset[];
+  label: string;
 
   /**
-   * x Axis labels (unit)
+   * Chart Dataset list
    */
-  labels: string[];
+  datasets?: Dataset[];
+
+  /**
+   * Chart x Axis labels (unit)
+   */
+  labels?: string[];
 
   /**
    * Additional stats
    */
-  stats: { label: string; value: string | number }[];
+  stats?: { label: string; value: string | number }[];
+
+  /**
+   * Column definition in case a table needs to be displayed
+   */
+  columns?: { title: string; dataIndex: string; key: string }[];
+
+  /**
+   * Table data in case a table needs to be displayed.
+   *
+   * Each record key should match column key prop in order to display values in the correct column
+   */
+  rows?: Record<string, unknown>[];
 }
 
-export type BusinessOverviewData = Record<string, OverviewChart>;
+export type BusinessOverviewData = Record<string, OverviewContent>;
 
 export interface BaseCardInfo {
   /**

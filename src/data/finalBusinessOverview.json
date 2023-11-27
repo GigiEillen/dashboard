@@ -1,0 +1,122 @@
+{
+  "disbursements": {
+    "label": "Disbursements",
+    "columns": [
+      {
+        "title": "Statement ID",
+        "dataIndex": "statementID",
+        "key": "statementID"
+      },
+      {
+        "title": "Start Date",
+        "dataIndex": "startDate",
+        "key": "startDate"
+      },
+      {
+        "title": "End Date",
+        "dataIndex": "endDate",
+        "key": "endDate"
+      },
+      {
+        "title": "Deposit Date",
+        "dataIndex": "depositDate",
+        "key": "depositDate"
+      },
+      {
+        "title": "Amount",
+        "dataIndex": "amount",
+        "key": "amount"
+      }
+    ],
+    "rows": [
+      {
+        "key": "row-1",
+        "statementID": "-",
+        "startDate": "-",
+        "endDate": "-",
+        "depositDate": "-",
+        "amount": "-"
+      }
+    ]
+  },
+  "pastDueFunds": {
+    "label": "Past Due Funds",
+    "columns": [
+      {
+        "title": "Statement ID",
+        "dataIndex": "statementID",
+        "key": "statementID"
+      },
+      {
+        "title": "Start Date",
+        "dataIndex": "startDate",
+        "key": "startDate"
+      },
+      {
+        "title": "End Date",
+        "dataIndex": "endDate",
+        "key": "endDate"
+      },
+      {
+        "title": "Deposit Date",
+        "dataIndex": "depositDate",
+        "key": "depositDate"
+      },
+      {
+        "title": "Amount",
+        "dataIndex": "amount",
+        "key": "amount"
+      }
+    ],
+    "rows": [
+      {
+        "key": "row-1",
+        "statementID": "-",
+        "startDate": "-",
+        "endDate": "-",
+        "depositDate": "-",
+        "amount": "-"
+      }
+    ]
+  },
+  "transactionsHistory": {
+    "label": "Transactions History",
+    "columns": [
+      {
+        "title": "Statement ID",
+        "dataIndex": "statementID",
+        "key": "statementID"
+      },
+      {
+        "title": "Start Date",
+        "dataIndex": "startDate",
+        "key": "startDate"
+      },
+      {
+        "title": "End Date",
+        "dataIndex": "endDate",
+        "key": "endDate"
+      },
+      {
+        "title": "Deposit Date",
+        "dataIndex": "depositDate",
+        "key": "depositDate"
+      },
+      {
+        "title": "Amount",
+        "dataIndex": "amount",
+        "key": "amount"
+      }
+    ],
+    "rows": [
+      {
+        "key": "row-1",
+        "statementID": "-",
+        "startDate": "-",
+        "endDate": "-",
+        "depositDate": "-",
+        "amount": "-"
+      }
+    ]
+  }
+}

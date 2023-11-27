@@ -1,5 +1,6 @@
 {
   "opportunities": {
+    "label": "Opportunities",
     "datasets": [
       {
         "type": "line",
@@ -36,6 +37,7 @@
     ]
   },
   "gss": {
+    "label": "GSS",
     "datasets": [
       {
         "type": "line",
@@ -72,6 +74,7 @@
     ]
   },
   "privateOffers": {
+    "label": "Private Offers",
     "datasets": [
       {
         "type": "line",
@@ -108,6 +111,7 @@
     ]
   },
   "activeSubs": {
+    "label": "Active Subscribers",
     "datasets": [
       {
         "type": "line",

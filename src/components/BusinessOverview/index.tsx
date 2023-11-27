@@ -1,38 +1,63 @@
-import { useEffect, useState } from 'react';
-import { Card, Divider, Menu, Select } from 'antd';
+import { useEffect, useState, useMemo, type FC } from 'react';
+import { Card, Divider, Menu, Select, Table } from 'antd';
 import type { ChartData, ChartOptions } from 'chart.js';
 import 'chart.js/auto';
 import { Chart } from 'react-chartjs-2';
 
 import businessOverview from '../../data/businessOverview.json';
+import finalBusinessOverview from '../../data/finalBusinessOverview.json';
 import type { BusinessOverviewData } from '../types';
-import {
-  BUSINESS_OVERVIEW_OPTIONS,
-  BUSINESS_OVERVIEW_PERIODS,
-  CHART_OPTIONS,
-} from './constants';
-import { OVERVIEW_MENU } from './enums';
+import { BUSINESS_OVERVIEW_PERIODS, CHART_OPTIONS } from './constants';
 
 import './BusinessOverview.scss';
 
-const BusinessOverview = () => {
-  const [selection, setSelection] = useState<string[]>([
-    OVERVIEW_MENU.OPPORTUNITIES_KEY,
-  ]);
+interface BusinessOverviewProps {
+  /**
+   * Prop id, this should be used to make calls to the service and retrieve specific configuration.
+   * Just for demo purposes I'm going to use an if close instead.
+   */
+  id: string;
+}
+
+const BusinessOverview: FC<BusinessOverviewProps> = ({ id }) => {
+  const [selection, setSelection] = useState<string[]>();
   const [period, setPeriod] = useState('0');
   const [responseData, setResponseData] = useState<BusinessOverviewData>();
 
+  const menuOptions = useMemo(
+    () =>
+      responseData
+        ? Object.entries(responseData).map(([key, { label }]) => ({
+            key,
+            label,
+          }))
+        : undefined,
+    [responseData],
+  );
+
   useEffect(() => {
     setTimeout(() => {
-      setResponseData(businessOverview);
+      if (id === 'chart-status') {
+        setResponseData(businessOverview);
+      } else {
+        setResponseData(finalBusinessOverview);
+      }
     }, 200);
-  }, []);
+  }, [id]);
+
+  useEffect(() => {
+    const menuKey = menuOptions?.[0].key;
+    if (menuKey) {
+      setSelection([menuKey]);
+    }
+  }, [menuOptions]);
 
   const onClick = ({ key }: { key: string }) => {
     setSelection([key]);
   };
 
-  const { datasets, labels, stats } = responseData?.[selection[0]] ?? {};
+  const { datasets, labels, stats, columns, rows } =
+    responseData?.[selection?.[0] ?? ''] ?? {};
 
   return (
     <div className="business-overview-container">
@@ -51,7 +76,7 @@ const BusinessOverview = () => {
           onClick={onClick}
           selectedKeys={selection}
           mode="horizontal"
-          items={BUSINESS_OVERVIEW_OPTIONS}
+          items={menuOptions}
         />
         {datasets && (
           <div className="chart-container">
@@ -62,17 +87,22 @@ const BusinessOverview = () => {
             />
           </div>
         )}
-        <div className="stats-container">
-          {stats?.map(({ label, value }, index) => (
-            <div key={`stats-${index}`} className="stats-container">
-              <div className="stat">
-                <h3 className="semi-bold">{value}</h3>
-                <p className="md medium secondary">{label}</p>
+        {stats && (
+          <div className="stats-container">
+            {stats?.map(({ label, value }, index) => (
+              <div key={`stats-${index}`} className="stats-container">
+                <div className="stat">
+                  <h3 className="semi-bold">{value}</h3>
+                  <p className="md medium secondary">{label}</p>
+                </div>
+                {index < stats.length - 1 && <p className="line-border">|</p>}
               </div>
-              {index < stats.length - 1 && <p className="line-border">|</p>}
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
+        {columns && rows && (
+          <Table columns={columns} dataSource={rows} pagination={false} />
+        )}
       </Card>
     </div>
   );

@@ -3,7 +3,7 @@
 
   .ant-card-body {
     padding: 0;
-    height: 470px;
+    min-height: 100px;
   }
 
   .period {
@@ -20,6 +20,7 @@
     flex: 1;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 20px;
 
     .line-border {
       color: #d0d5dd;

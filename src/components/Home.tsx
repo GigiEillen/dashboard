@@ -67,8 +67,9 @@ const Home = () => {
         onPeriodFilterChange={onPeriodFilterChange}
       />
       {widgets ? <Widgets widgets={widgets} /> : <Spin />}
-      <BusinessOverview />
+      <BusinessOverview id="chart-status" />
       <InfoCards />
+      <BusinessOverview id="history" />
     </div>
   );
 };
