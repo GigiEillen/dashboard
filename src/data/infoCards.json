@@ -81,12 +81,16 @@
         {
           "type": "line",
           "label": "AWS Originated Opportunities Tab",
-          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70],
+          "backgroundColor": "#7F56D9",
+          "borderColor": "#7F56D9"
         },
         {
           "type": "line",
           "label": "Total count (AO+PO)",
-          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60],
+          "backgroundColor": "#98A2B3",
+          "borderColor": "#98A2B3"
         }
       ],
       "labels": [
@@ -116,12 +120,16 @@
         {
           "type": "line",
           "label": "AWS Originated Opportunities Tab",
-          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70],
+          "backgroundColor": "#7F56D9",
+          "borderColor": "#7F56D9"
         },
         {
           "type": "line",
           "label": "Total count (AO+PO)",
-          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60],
+          "backgroundColor": "#98A2B3",
+          "borderColor": "#98A2B3"
         }
       ],
       "labels": [
@@ -151,12 +159,16 @@
         {
           "type": "line",
           "label": "AWS Originated Opportunities Tab",
-          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70],
+          "backgroundColor": "#7F56D9",
+          "borderColor": "#7F56D9"
         },
         {
           "type": "line",
           "label": "Total count (AO+PO)",
-          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60],
+          "backgroundColor": "#98A2B3",
+          "borderColor": "#98A2B3"
         }
       ],
       "labels": [

@@ -121,3 +121,19 @@ p {
     margin: 0;
   }
 }
+
+.ant-avatar {
+  background-color: #f4ebff;
+  .anticon,
+  .ant-avatar-string {
+    color: #7f56d9;
+  }
+}
+
+.ant-layout .ant-layout-sider {
+  background-color: #101828;
+  .ant-layout-sider-trigger,
+  .ant-menu-dark {
+    background-color: #101828;
+  }
+}

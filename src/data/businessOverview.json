@@ -5,12 +5,15 @@
       {
         "type": "line",
         "label": "AWS Originated Opportunities Tab",
-        "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+        "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70],
+        "backgroundColor": "#F79009",
+        "borderColor": "#F79009"
       },
       {
         "type": "bar",
         "label": "Total count (AO+PO)",
-        "data": [90, 60, 40, 70, 39, 90, 70, 40, 110, 70, 25, 78]
+        "data": [90, 60, 40, 70, 39, 90, 70, 40, 110, 70, 25, 78],
+        "backgroundColor": "#7f56d9"
       }
     ],
     "labels": [

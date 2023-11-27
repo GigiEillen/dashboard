@@ -103,6 +103,16 @@ interface Dataset {
    * Data to be displayed order by unit
    */
   data: number[];
+
+  /**
+   * Custom color
+   */
+  backgroundColor?: string;
+
+  /**
+   * Custom color
+   */
+  borderColor?: string;
 }
 
 interface OverviewContent {

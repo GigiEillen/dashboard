@@ -64,10 +64,7 @@ const Header: FC<HeaderProps> = ({ group, onGroupChange, groupList }) => {
           </Badge>
         </div>
         <div>
-          <Avatar
-            style={{ backgroundColor: '#87d068' }}
-            icon={<UserOutlined />}
-          />
+          <Avatar icon={<UserOutlined />} />
         </div>
       </div>
       <MessagesModal open={open} closeModal={() => setOpen(false)} />

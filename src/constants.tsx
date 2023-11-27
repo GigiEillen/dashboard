@@ -10,6 +10,9 @@ import {
   TeamOutlined,
 } from '@ant-design/icons';
 
+export const MAIN_COLOR = '#7f56d9';
+export const LIGHT_COLOR = '#F4EBFF';
+
 export const SIDER_OPTIONS = [
   {
     key: 'home',
