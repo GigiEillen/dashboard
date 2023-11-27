@@ -12,5 +12,62 @@
       { "label": "PO Goal", "value": 300, "goal": 1000, "unit": "Offers" },
       { "label": "GSS Goal", "value": 5000000, "goal": 10000000, "prefix": "$" }
     ]
+  },
+  "topSellingProds": {
+    "type": "list",
+    "label": "Top Selling Products",
+    "data": [
+      {
+        "label": "Cloud Monitoring Platform (AWS)",
+        "values": [
+          {
+            "label": "Total GSS",
+            "value": "$750K",
+            "rate": "5.2k",
+            "status": "expired"
+          },
+          {
+            "label": "Total GSS",
+            "value": "$750K",
+            "rate": "5.2k",
+            "status": "expired"
+          }
+        ]
+      },
+      {
+        "label": "Cloud Monitoring Platform (AWS)",
+        "values": [
+          {
+            "label": "Total GSS",
+            "value": "$750K",
+            "rate": "5.2k",
+            "status": "expired"
+          },
+          {
+            "label": "Total GSS",
+            "value": "$750K",
+            "rate": "5.2k",
+            "status": "expired"
+          }
+        ]
+      },
+      {
+        "label": "Cloud Monitoring Platform (AWS)",
+        "values": [
+          {
+            "label": "Total GSS",
+            "value": "$750K",
+            "rate": "5.2k",
+            "status": "expired"
+          },
+          {
+            "label": "Total GSS",
+            "value": "$750K",
+            "rate": "5.2k",
+            "status": "expired"
+          }
+        ]
+      }
+    ]
   }
 }

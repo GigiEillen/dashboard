@@ -39,4 +39,50 @@
       }
     }
   }
+
+  .top-selling-prods-container {
+    .item-container {
+      flex: 1;
+      .header {
+        display: flex;
+        align-items: center;
+
+        h5 {
+          padding-left: 10px;
+        }
+      }
+
+      .values {
+        display: flex;
+        column-gap: 30px;
+        padding: 10px 45px;
+
+        .measure {
+          display: flex;
+          column-gap: 10px;
+
+          > * {
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            column-gap: 5px;
+          }
+
+          div {
+            padding: 0 5px;
+          }
+
+          .active {
+            background: #ecfdf3;
+            color: #12b76a;
+          }
+
+          .expired {
+            background: #fef3f2;
+            color: #f04438;
+          }
+        }
+      }
+    }
+  }
 }

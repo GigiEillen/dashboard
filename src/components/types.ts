@@ -147,13 +147,13 @@ export interface ProgressInfo {
   }[];
 }
 
-interface ListInfo {
+export interface ListInfo {
   type: 'list';
   data: {
     /* List title */
     label: string;
     /* Measure values */
-    values: { label: string; value: string; rate: string; status: string };
+    values: { label: string; value: string; rate: string; status: string }[];
   }[];
 }
 

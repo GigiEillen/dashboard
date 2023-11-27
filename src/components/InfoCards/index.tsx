@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import response from '../../data/infoCards.json';
 import type { CardsInfoData } from '../types';
 import Goals from './Goals';
+import TopSellingProds from './TopSellingProds';
 
 import './InfoCards.scss';
 
@@ -23,6 +24,8 @@ const InfoCards = () => {
 
           return card.type === 'progress' ? (
             <Goals key={key} label={label} data={card.data} />
+          ) : card.type === 'list' ? (
+            <TopSellingProds key={key} label={label} data={card.data} />
           ) : (
             <div key={key} />
           );
