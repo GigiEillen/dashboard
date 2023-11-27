@@ -61,49 +61,51 @@ const BusinessOverview: FC<BusinessOverviewProps> = ({ id }) => {
 
   return (
     <div className="business-overview-container">
-      <Card
-        title="Business Overview"
-        extra={
-          <Select
-            value={period}
-            onChange={setPeriod}
-            options={BUSINESS_OVERVIEW_PERIODS}
-            className="period"
-          />
-        }>
-        <Divider style={{ margin: 0 }} />
-        <Menu
-          onClick={onClick}
-          selectedKeys={selection}
-          mode="horizontal"
-          items={menuOptions}
-        />
-        {datasets && (
-          <div className="chart-container">
-            <Chart
-              data={{ datasets, labels } as ChartData}
-              type="line"
-              options={CHART_OPTIONS as ChartOptions}
+      <div className="card-container">
+        <Card
+          title="Business Overview"
+          extra={
+            <Select
+              value={period}
+              onChange={setPeriod}
+              options={BUSINESS_OVERVIEW_PERIODS}
+              className="period"
             />
-          </div>
-        )}
-        {stats && (
-          <div className="stats-container">
-            {stats?.map(({ label, value }, index) => (
-              <div key={`stats-${index}`} className="stats-container">
-                <div className="stat">
-                  <h3 className="semi-bold">{value}</h3>
-                  <p className="md medium secondary">{label}</p>
+          }>
+          <Divider style={{ margin: 0 }} />
+          <Menu
+            onClick={onClick}
+            selectedKeys={selection}
+            mode="horizontal"
+            items={menuOptions}
+          />
+          {datasets && (
+            <div className="chart-container">
+              <Chart
+                data={{ datasets, labels } as ChartData}
+                type="line"
+                options={CHART_OPTIONS as ChartOptions}
+              />
+            </div>
+          )}
+          {stats && (
+            <div className="stats-container">
+              {stats?.map(({ label, value }, index) => (
+                <div key={`stats-${index}`} className="stats-container">
+                  <div className="stat">
+                    <h3 className="semi-bold">{value}</h3>
+                    <p className="md medium secondary">{label}</p>
+                  </div>
+                  {index < stats.length - 1 && <p className="line-border">|</p>}
                 </div>
-                {index < stats.length - 1 && <p className="line-border">|</p>}
-              </div>
-            ))}
-          </div>
-        )}
-        {columns && rows && (
-          <Table columns={columns} dataSource={rows} pagination={false} />
-        )}
-      </Card>
+              ))}
+            </div>
+          )}
+          {columns && rows && (
+            <Table columns={columns} dataSource={rows} pagination={false} />
+          )}
+        </Card>
+      </div>
     </div>
   );
 };
