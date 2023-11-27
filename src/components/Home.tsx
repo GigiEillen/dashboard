@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Spin } from 'antd';
+import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
 import BusinessOverview from './BusinessOverview';
 import Header from './Header';
@@ -26,6 +27,9 @@ const Home = () => {
   const [widgets, setWidgets] = useState<WidgetList>();
   const [userConfig, setUserConfig] = useState<UserConfig>();
   const [selectedGroup, setSelectedGroup] = useState('');
+  const [widgetSelection, setWidgetSelection] = useState<CheckboxValueType[]>(
+    [],
+  );
 
   useEffect(() => {
     setTimeout(() => {
@@ -40,6 +44,7 @@ const Home = () => {
     // Simulating calls based on filters
     setTimeout(() => {
       setWidgets(widgetListResponse as WidgetList);
+      setWidgetSelection(widgetListResponse.map(({ id }) => id));
     }, 500);
   }, [periodFilter]);
 
@@ -50,6 +55,10 @@ const Home = () => {
   const onGroupChange = (newValue: string) => {
     setSelectedGroup(newValue);
   };
+
+  const filteredWidgets = widgets?.filter(({ id }) =>
+    widgetSelection.includes(id),
+  );
 
   return (
     <div className="home-container">
@@ -62,11 +71,21 @@ const Home = () => {
       ) : (
         <Spin />
       )}
-      <WidgetHeader
-        periodFilter={periodFilter}
-        onPeriodFilterChange={onPeriodFilterChange}
-      />
-      {widgets ? <Widgets widgets={widgets} /> : <Spin />}
+
+      {widgets && filteredWidgets ? (
+        <>
+          <WidgetHeader
+            periodFilter={periodFilter}
+            onPeriodFilterChange={onPeriodFilterChange}
+            widgets={widgets}
+            widgetSelection={widgetSelection}
+            setWidgetSelection={setWidgetSelection}
+          />
+          <Widgets widgets={filteredWidgets} />
+        </>
+      ) : (
+        <Spin />
+      )}
       <BusinessOverview id="chart-status" />
       <InfoCards />
       <BusinessOverview id="history" />

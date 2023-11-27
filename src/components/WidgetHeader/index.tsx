@@ -1,8 +1,12 @@
-import type { FC } from 'react';
-import { Button, Select, DatePicker } from 'antd';
+import { useState, type FC, type SetStateAction, type Dispatch } from 'react';
+import { Button, Select, DatePicker, Modal, Checkbox } from 'antd';
 import { AppstoreOutlined } from '@ant-design/icons';
+import type {
+  CheckboxOptionType,
+  CheckboxValueType,
+} from 'antd/es/checkbox/Group';
 
-import type { OnPeriodFilterChange, PeriodFilter } from '../types';
+import type { OnPeriodFilterChange, PeriodFilter, WidgetList } from '../types';
 import {
   PERIOD_BY_OPTIONS,
   PERIOD_OPTIONS,
@@ -10,6 +14,8 @@ import {
 } from './constants';
 
 import './WidgetHeader.scss';
+
+const CheckboxGroup = Checkbox.Group;
 
 const { RangePicker } = DatePicker;
 
@@ -23,19 +29,53 @@ interface WidgetHeaderProps {
    * Function to be called when any filter value changes.
    */
   onPeriodFilterChange: OnPeriodFilterChange;
+
+  /**
+   * Widget List
+   */
+  widgets: WidgetList;
+
+  /**
+   * Selected Widgets
+   */
+  widgetSelection: CheckboxValueType[];
+
+  /**
+   * Setter function for widgetSelection
+   */
+  setWidgetSelection: Dispatch<SetStateAction<CheckboxValueType[]>>;
 }
 
 const WidgetHeader: FC<WidgetHeaderProps> = ({
   periodFilter,
   onPeriodFilterChange,
+  widgets,
+  widgetSelection,
+  setWidgetSelection,
 }) => {
   const { period, periodBy, periodUnit, dateRange } = periodFilter;
+
+  const initialSelection = widgets.map(
+    ({ id, label }): CheckboxOptionType => ({ value: id, label }),
+  );
+
+  const [open, setOpen] = useState(false);
+
+  const [selection, setSelection] =
+    useState<CheckboxValueType[]>(widgetSelection);
+
+  const onClick = () => setOpen(true);
+
+  const onSave = () => {
+    setWidgetSelection(selection);
+    setOpen(false);
+  };
 
   return (
     <div className="widget-header-content">
       <div className="title">
         <h4 className="semi-bold">Sleek Sky</h4>
-        <Button type="primary" icon={<AppstoreOutlined />}>
+        <Button type="primary" icon={<AppstoreOutlined />} onClick={onClick}>
           Add / Remove widgets
         </Button>
       </div>
@@ -66,6 +106,21 @@ const WidgetHeader: FC<WidgetHeaderProps> = ({
           className="period-by"
         />
       </div>
+      <Modal
+        title="Add / Remove Widgets"
+        open={open}
+        onCancel={() => setOpen(false)}
+        footer={[
+          <Button key="save" type="primary" onClick={onSave}>
+            Save
+          </Button>,
+        ]}>
+        <CheckboxGroup
+          options={initialSelection}
+          value={selection}
+          onChange={setSelection}
+        />
+      </Modal>
     </div>
   );
 };
