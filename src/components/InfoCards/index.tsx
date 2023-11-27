@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import response from '../../data/infoCards.json';
 import type { CardsInfoData } from '../types';
+import ActivityInfo from './ActivityInfo';
 import ChartInfo from './ChartInfo';
 import Goals from './Goals';
 import TopSellingProds from './TopSellingProds';
@@ -30,7 +31,7 @@ const InfoCards = () => {
           ) : card.type === 'chart' ? (
             <ChartInfo key={key} label={label} data={card.data} />
           ) : (
-            <div key={key} />
+            <ActivityInfo key={key} label={label} data={card.data} />
           );
         })}
     </div>

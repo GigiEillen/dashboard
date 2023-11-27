@@ -177,6 +177,17 @@ export interface ChartInfo {
   };
 }
 
-type CardInfoData = BaseCardInfo & (ProgressInfo | ListInfo | ChartInfo);
+export interface ActivityInfo {
+  type: 'activity';
+  data: {
+    date: string;
+    label: string;
+    description: string;
+    icons?: { label: string; color: string }[];
+  }[];
+}
+
+type CardInfoData = BaseCardInfo &
+  (ProgressInfo | ListInfo | ChartInfo | ActivityInfo);
 
 export type CardsInfoData = Record<string, CardInfoData>;

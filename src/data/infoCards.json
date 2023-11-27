@@ -174,5 +174,37 @@
         "Dec"
       ]
     }
+  },
+  "recentAct": {
+    "type": "activity",
+    "label": "Recent Activity",
+    "data": [
+      {
+        "date": "12 Feb",
+        "label": "PUBLISHED LISTING",
+        "description": "CloudHealth SasS Listing on AWS"
+      },
+      {
+        "date": "12 Feb",
+        "label": "PUBLISHED LISTING",
+        "description": "Customer: American Express, Offer-ID: 12345hr",
+        "icons": [
+          { "label": "DP" },
+          { "label": "DP" },
+          { "label": "DP" },
+          { "label": "DP" }
+        ]
+      },
+      {
+        "date": "12 Feb",
+        "label": "PUBLISHED LISTING",
+        "description": "CloudHealth SasS Listing on AWS"
+      },
+      {
+        "date": "12 Feb",
+        "label": "PUBLISHED LISTING",
+        "description": "CloudHealth SasS Listing on AWS"
+      }
+    ]
   }
 }

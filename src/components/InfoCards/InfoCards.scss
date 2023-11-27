@@ -105,6 +105,18 @@
     }
   }
 
+  .activity-container {
+    .icons {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: 5px;
+    }
+
+    .content {
+      padding-top: 25px;
+    }
+  }
+
   .active {
     background: #ecfdf3;
     color: #12b76a;
