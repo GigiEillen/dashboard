@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import response from '../../data/infoCards.json';
 import type { CardsInfoData } from '../types';
+import ChartInfo from './ChartInfo';
 import Goals from './Goals';
 import TopSellingProds from './TopSellingProds';
 
@@ -26,6 +27,8 @@ const InfoCards = () => {
             <Goals key={key} label={label} data={card.data} />
           ) : card.type === 'list' ? (
             <TopSellingProds key={key} label={label} data={card.data} />
+          ) : card.type === 'chart' ? (
+            <ChartInfo key={key} label={label} data={card.data} />
           ) : (
             <div key={key} />
           );

@@ -69,5 +69,110 @@
         ]
       }
     ]
+  },
+  "freeTrials": {
+    "type": "chart",
+    "label": "Free Trials",
+    "data": {
+      "rate": "5.2k",
+      "status": "expired",
+      "description": "21 from last period",
+      "datasets": [
+        {
+          "type": "line",
+          "label": "AWS Originated Opportunities Tab",
+          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+        },
+        {
+          "type": "line",
+          "label": "Total count (AO+PO)",
+          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+        }
+      ],
+      "labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    }
+  },
+  "opportunityWinRate": {
+    "type": "chart",
+    "label": "Opportunity Win Rate",
+    "data": {
+      "rate": "5.2k",
+      "status": "expired",
+      "description": "21 from last period",
+      "datasets": [
+        {
+          "type": "line",
+          "label": "AWS Originated Opportunities Tab",
+          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+        },
+        {
+          "type": "line",
+          "label": "Total count (AO+PO)",
+          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+        }
+      ],
+      "labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    }
+  },
+  "combinedInv": {
+    "type": "chart",
+    "label": "Combined investments",
+    "data": {
+      "rate": "5.2k",
+      "status": "expired",
+      "description": "21 from last period",
+      "datasets": [
+        {
+          "type": "line",
+          "label": "AWS Originated Opportunities Tab",
+          "data": [30, 58, 35, 60, 35, 60, 20, 35, 100, 65, 25, 70]
+        },
+        {
+          "type": "line",
+          "label": "Total count (AO+PO)",
+          "data": [50, 60, 40, 80, 20, 90, 70, 40, 90, 70, 10, 60]
+        }
+      ],
+      "labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    }
   }
 }

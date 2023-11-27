@@ -157,6 +157,26 @@ export interface ListInfo {
   }[];
 }
 
-type CardInfoData = BaseCardInfo & (ProgressInfo | ListInfo);
+export interface ChartInfo {
+  type: 'chart';
+  data: {
+    /* Dataset list */
+    datasets: Dataset[];
+
+    /* x Axis labels (unit) */
+    labels: string[];
+
+    /* Period information */
+    description: string;
+
+    /* Rate info */
+    rate: string;
+
+    /* rate status */
+    status: string;
+  };
+}
+
+type CardInfoData = BaseCardInfo & (ProgressInfo | ListInfo | ChartInfo);
 
 export type CardsInfoData = Record<string, CardInfoData>;

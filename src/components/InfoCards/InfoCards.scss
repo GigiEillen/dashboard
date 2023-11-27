@@ -6,6 +6,7 @@
 
   > * {
     flex-basis: 49%;
+    max-width: 49%;
   }
 
   .ant-card {
@@ -71,18 +72,46 @@
           div {
             padding: 0 5px;
           }
-
-          .active {
-            background: #ecfdf3;
-            color: #12b76a;
-          }
-
-          .expired {
-            background: #fef3f2;
-            color: #f04438;
-          }
         }
       }
     }
+  }
+
+  .chart-info-container {
+    .ant-card-head-title {
+      padding: 10px 0;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      div {
+        display: flex;
+        padding: 5px;
+        border-radius: 50px;
+        margin-left: 10px;
+      }
+    }
+
+    .chart-container {
+      height: 250px;
+    }
+
+    .footer {
+      padding-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .active {
+    background: #ecfdf3;
+    color: #12b76a;
+  }
+
+  .expired {
+    background: #fef3f2;
+    color: #f04438;
   }
 }
