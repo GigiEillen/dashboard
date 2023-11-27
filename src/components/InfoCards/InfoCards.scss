@@ -1,0 +1,42 @@
+.info-cards-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+
+  > * {
+    flex-basis: 49%;
+  }
+
+  .ant-card {
+    height: 100%;
+  }
+
+  .goals-container {
+    .progress-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 0;
+
+      > * {
+        flex-grow: 1;
+
+        &.label {
+          flex-grow: 0;
+          flex-basis: 15%;
+          padding: 0 15px;
+
+          p {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+
+        .ant-progress-outer {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

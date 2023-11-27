@@ -3,6 +3,7 @@ import { Spin } from 'antd';
 
 import BusinessOverview from './BusinessOverview';
 import Header from './Header';
+import InfoCards from './InfoCards';
 import WidgetHeader from './WidgetHeader';
 import Widgets from './Widgets';
 import type {
@@ -67,6 +68,7 @@ const Home = () => {
       />
       {widgets ? <Widgets widgets={widgets} /> : <Spin />}
       <BusinessOverview />
+      <InfoCards />
     </div>
   );
 };

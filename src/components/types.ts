@@ -123,3 +123,40 @@ interface OverviewChart {
 }
 
 export type BusinessOverviewData = Record<string, OverviewChart>;
+
+export interface BaseCardInfo {
+  /**
+   * Card title
+   */
+  label: string;
+}
+
+export interface ProgressInfo {
+  type: 'progress';
+  data: {
+    /* Progress bar label */
+    label: string;
+    /* Progress bar value, this will be converted to percentage based on goal */
+    value: number;
+    /* Progress goal */
+    goal: number;
+    /* Prefix value as currency */
+    prefix?: string;
+    /* Unit value */
+    unit?: string;
+  }[];
+}
+
+interface ListInfo {
+  type: 'list';
+  data: {
+    /* List title */
+    label: string;
+    /* Measure values */
+    values: { label: string; value: string; rate: string; status: string };
+  }[];
+}
+
+type CardInfoData = BaseCardInfo & (ProgressInfo | ListInfo);
+
+export type CardsInfoData = Record<string, CardInfoData>;

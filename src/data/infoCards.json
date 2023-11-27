@@ -1,0 +1,16 @@
+{
+  "goals": {
+    "type": "progress",
+    "label": "Goals",
+    "data": [
+      {
+        "label": "GSS Goal",
+        "value": 4000000,
+        "goal": 10000000,
+        "prefix": "$"
+      },
+      { "label": "PO Goal", "value": 300, "goal": 1000, "unit": "Offers" },
+      { "label": "GSS Goal", "value": 5000000, "goal": 10000000, "prefix": "$" }
+    ]
+  }
+}
