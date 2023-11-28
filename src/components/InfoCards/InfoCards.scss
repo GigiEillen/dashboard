@@ -15,6 +15,9 @@
   }
 
   .goals-container {
+    .ant-card-body {
+      padding: 40px 24px;
+    }
     .progress-container {
       display: flex;
       align-items: center;
@@ -75,6 +78,10 @@
           }
         }
       }
+    }
+
+    .ant-card-body {
+      padding: 5px 24px;
     }
   }
 

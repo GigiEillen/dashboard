@@ -19,7 +19,7 @@ interface TopSellingProdsProps {
 
 const TopSellingProds: FC<TopSellingProdsProps> = ({ label, data }) => (
   <div className="top-selling-prods-container">
-    <Card title={label}>
+    <Card title={<h6>{label}</h6>}>
       <List
         itemLayout="horizontal"
         dataSource={data}

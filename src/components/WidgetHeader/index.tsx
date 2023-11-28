@@ -92,7 +92,7 @@ const WidgetHeader: FC<WidgetHeaderProps> = ({
             onChange={onPeriodFilterChange('dateRange')}
           />
         </div>
-        <p className="sm medium">Compared to</p>
+        <p className="sm medium secondary">Compared to</p>
         <Select
           value={period}
           onChange={onPeriodFilterChange('period')}

@@ -48,14 +48,12 @@ h6 {
   font-size: 18px;
   line-height: 1.2;
   margin: 0;
-  font-family: 'Inter';
 }
 
 h5 {
   font-size: 20px;
   line-height: 1.2;
   margin: 0;
-  font-family: 'Inter';
 }
 
 h4 {
@@ -68,18 +66,15 @@ h3 {
   font-size: 28px;
   line-height: 1.2;
   margin: 0;
-  font-family: 'Inter';
 }
 
 h2 {
   font-size: 32px;
   line-height: 1.2;
   margin: 0;
-  font-family: 'Inter';
 }
 
 p {
-  font-family: 'Inter';
   margin: 0;
 
   &.xs {
@@ -99,10 +94,6 @@ p {
     font-size: 16px;
     line-height: 1.5;
   }
-}
-
-.ant-select {
-  font-family: 'Inter';
 }
 
 :where(.css-dev-only-do-not-override-zcfrx9).ant-select-single

@@ -24,7 +24,7 @@ const Goals: FC<GoalsProps> = ({ label, data }) => {
   return (
     <div className="goals-container">
       <Card
-        title={label}
+        title={<h6>{label}</h6>}
         extra={<Button onClick={onClick}>{`Edit ${label}`}</Button>}>
         {data.map(({ goal, label, value, prefix, unit }, index) => (
           <div className="progress-container" key={`progress-status-${index}`}>

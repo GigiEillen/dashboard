@@ -35,7 +35,7 @@ const ActivityInfo: FC<ActivityInfoProps> = ({ label, data }) => {
 
   return (
     <div className="activity-container">
-      <Card title={label} extra={<Button>View More</Button>}>
+      <Card title={<h6>{label}</h6>} extra={<Button>View More</Button>}>
         <div className="content">
           <Timeline mode="right" items={items} />
         </div>

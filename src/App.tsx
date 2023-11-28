@@ -23,6 +23,7 @@ function App() {
           colorPrimary: MAIN_COLOR,
           colorInfo: MAIN_COLOR,
           colorBgLayout: '#fff',
+          fontFamily: 'Inter',
         },
       }}>
       <Layout style={{ minHeight: '100vh' }}>

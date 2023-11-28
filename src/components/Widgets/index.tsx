@@ -28,11 +28,13 @@ const Widgets: FC<WidgetsProps> = ({ widgets }) => (
             </div>
             {value && <h2 className="widget-value semi-bold">{value}</h2>}
             <div className="measures">
-              {measures?.map(({ status, type, label, value }) => (
-                <div>
-                  <p className={`sm medium ${MEASURE_COLOR_LOOKUP[status]}`}>
-                    {label}
-                  </p>
+              {measures?.map(({ status, type, label, value }, measureIdx) => (
+                <div key={`${id}-measure-${measureIdx}`}>
+                  {label && (
+                    <p className={`sm medium ${MEASURE_COLOR_LOOKUP[status]}`}>
+                      {label}
+                    </p>
+                  )}
                   {type === MeasureType.INFO && (
                     <h3 className="semi-bold">{value}</h3>
                   )}
@@ -40,7 +42,9 @@ const Widgets: FC<WidgetsProps> = ({ widgets }) => (
                     <div
                       className={`rate-value ${MEASURE_COLOR_LOOKUP[status]}`}>
                       {value.map((rateValue, index) => (
-                        <>
+                        <div
+                          key={`${id}-measure-${measureIdx}-value${index}`}
+                          className="value">
                           {status === MeasureStatus.ACTIVE ? (
                             <UpOutlined />
                           ) : (
@@ -50,7 +54,7 @@ const Widgets: FC<WidgetsProps> = ({ widgets }) => (
                           {index < value.length - 1 && (
                             <p className="line-border">|</p>
                           )}
-                        </>
+                        </div>
                       ))}
                     </div>
                   )}
