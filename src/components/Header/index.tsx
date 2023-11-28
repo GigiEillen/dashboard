@@ -1,5 +1,6 @@
 import { type FC, useState } from 'react';
-import { Avatar, Badge, Button, Select } from 'antd';
+import { Avatar, Badge, Button, Dropdown, Select } from 'antd';
+import type { ItemType } from 'antd/es/menu/hooks/useItems';
 import {
   BellFilled,
   MessageFilled,
@@ -8,6 +9,7 @@ import {
 } from '@ant-design/icons';
 
 import MessagesModal from './MessagesModal';
+import { USER_DROPDOWN_OPTIONS } from './constants';
 
 import './Header.scss';
 
@@ -64,7 +66,11 @@ const Header: FC<HeaderProps> = ({ group, onGroupChange, groupList }) => {
           </Badge>
         </div>
         <div>
-          <Avatar icon={<UserOutlined />} />
+          <Dropdown
+            menu={{ items: USER_DROPDOWN_OPTIONS as ItemType[] }}
+            trigger={['click']}>
+            <Avatar icon={<UserOutlined />} />
+          </Dropdown>
         </div>
       </div>
       <MessagesModal open={open} closeModal={() => setOpen(false)} />
