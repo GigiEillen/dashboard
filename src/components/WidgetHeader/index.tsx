@@ -64,7 +64,10 @@ const WidgetHeader: FC<WidgetHeaderProps> = ({
   const [selection, setSelection] =
     useState<CheckboxValueType[]>(widgetSelection);
 
-  const onClick = () => setOpen(true);
+  const onClick = () => {
+    setOpen(true);
+    setSelection(widgetSelection);
+  };
 
   const onSave = () => {
     setWidgetSelection(selection);
