@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ConfigProvider, Layout, Menu } from 'antd';
 
 import Home from './components/Home';
-import { LIGHT_COLOR, MAIN_COLOR, SIDER_OPTIONS } from './constants';
+import { MAIN_COLOR, SIDER_OPTIONS } from './constants';
 
 import './App.scss';
 
@@ -10,6 +10,11 @@ const { Sider } = Layout;
 
 function App() {
   const [collapsed, setCollapsed] = useState(false);
+  const [selectedKeys, setSelectedKeys] = useState(['home']);
+
+  const onSelect = ({ selectedKeys }: { selectedKeys: string[] }) => {
+    setSelectedKeys(selectedKeys);
+  };
 
   return (
     <ConfigProvider
@@ -17,7 +22,6 @@ function App() {
         token: {
           colorPrimary: MAIN_COLOR,
           colorInfo: MAIN_COLOR,
-          colorTextPlaceholder: LIGHT_COLOR,
           colorBgLayout: '#fff',
         },
       }}>
@@ -35,9 +39,10 @@ function App() {
           </div>
           <Menu
             theme="dark"
-            defaultSelectedKeys={['home']}
+            selectedKeys={selectedKeys}
             mode="inline"
             items={SIDER_OPTIONS}
+            onSelect={onSelect}
           />
         </Sider>
         <Home />
