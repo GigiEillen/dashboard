@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { Navigate, Outlet, useNavigate } from 'react-router-dom';
 import { ConfigProvider, Layout, Menu } from 'antd';
 
-import Home from './components/Home';
 import { MAIN_COLOR, SIDER_OPTIONS } from './constants';
 
 import './App.scss';
@@ -9,12 +9,24 @@ import './App.scss';
 const { Sider } = Layout;
 
 function App() {
+  const navigate = useNavigate();
+
   const [collapsed, setCollapsed] = useState(false);
   const [selectedKeys, setSelectedKeys] = useState(['home']);
 
   const onSelect = ({ selectedKeys }: { selectedKeys: string[] }) => {
     setSelectedKeys(selectedKeys);
   };
+
+  const items = useMemo(
+    () =>
+      SIDER_OPTIONS.map(({ key, ...rest }) => ({
+        ...rest,
+        key,
+        onClick: () => navigate(`/${key}`),
+      })),
+    [navigate],
+  );
 
   return (
     <ConfigProvider
@@ -42,11 +54,12 @@ function App() {
             theme="dark"
             selectedKeys={selectedKeys}
             mode="inline"
-            items={SIDER_OPTIONS}
+            items={items}
             onSelect={onSelect}
           />
         </Sider>
-        <Home />
+        <Outlet />
+        <Navigate to="/home" />
       </Layout>
     </ConfigProvider>
   );
